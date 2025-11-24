@@ -1,0 +1,14 @@
+Los montículos (min-heaps) se utilizan en el algoritmo de Dijkstra para seleccionar
+de manera eficiente el nodo con la distancia mínima provisional.
+
+Durante la ejecución del algoritmo, constantemente se necesita obtener el nodo
+no visitado que tenga la menor distancia acumulada. Si se usara una búsqueda lineal,
+la operación costaría O(V), repitiéndose V veces, lo cual genera un costo total de
+O(V^2).
+
+Un min-heap permite que la operación de extracción del mínimo (extract-min)
+se realice en O(log V), mejorando el rendimiento a O((V + E) log V), lo cual es
+significativamente más eficiente, especialmente en grafos grandes.
+
+El montículo también permite actualizar las distancias de forma ordenada mediante
+las operaciones de decrease-key, manteniendo siempre el nodo más cercano en la raíz.
